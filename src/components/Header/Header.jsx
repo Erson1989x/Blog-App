@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import Results from '../Results/Results'
 import SearchPosts from '../SearchPosts/SearchPosts'
-import { PostContext } from '../../App'
+import { PostContext } from '../../PostContext'
 
 
 const Header = ({ }) => {

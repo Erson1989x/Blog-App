@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import { PostContext } from '../../App'
+import { PostContext } from '../../PostContext'
 
 const List = () => {
   const { posts } = useContext(PostContext)

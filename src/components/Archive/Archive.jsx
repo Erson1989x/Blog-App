@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react'
 import { createRandomPost } from '../../utils/createRandomPost'
-import { PostContext } from '../../App';
+import { PostContext } from '../../PostContext'
 
 
 
