@@ -1,4 +1,4 @@
-import { createContext } from "react";
+import { createContext, useContext } from "react";
 import { createRandomPost } from "./utils/createRandomPost";
 import { useState } from "react";
 
@@ -44,4 +44,8 @@ const PostProvider = ({ children }) => {
   );
 };
 
-export { PostProvider, PostContext };
+const usePosts =() => {
+    const context = useContext(PostContext);
+    return context;
+}
+export { PostProvider, usePosts };

@@ -1,8 +1,8 @@
-import React, { useContext } from 'react'
-import { PostContext } from '../../PostContext'
+import React from 'react'
+import { usePosts } from '../../PostContext'
 
 const List = () => {
-  const { posts } = useContext(PostContext)
+  const { posts } = usePosts();
   return (
     <ul>
     {posts.map((post, i) => (

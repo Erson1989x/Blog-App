@@ -1,10 +1,9 @@
-import { createContext, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Header from "./components/Header/Header";
 import Main from "./components/Main/Main";
 import Archive from "./components/Archive/Archive";
 import Footer from "./components/Footer/Footer";
-import { createRandomPost } from "./utils/createRandomPost";
-import { PostProvider, PostContext } from "./PostContext";
+import {PostProvider} from "./PostContext";
 
 function App() {
   const [isFakeDark, setIsFakeDark] = useState(false);
@@ -19,20 +18,21 @@ function App() {
 
   return (
     // 2 - Provide the context to the children
-    <section>
-      <button
-        onClick={() => setIsFakeDark((isFakeDark) => !isFakeDark)}
-        className="btn-fake-dark-mode"
-      >
-        {isFakeDark ? "☀️" : "🌙"}
-      </button>
-      <PostProvider>
+      <section>
+        <button
+          onClick={() => setIsFakeDark((isFakeDark) => !isFakeDark)}
+          className="btn-fake-dark-mode"
+        >
+          {isFakeDark ? "☀️" : "🌙"}
+        </button>
+        <PostProvider>
         <Header />
         <Main />
         <Archive />
         <Footer />
-      </PostProvider>
-    </section>
+        </PostProvider>
+      </section>
+
   );
 }
 
